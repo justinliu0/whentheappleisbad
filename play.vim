@@ -1,4 +1,9 @@
-et nocursorline
+set nobackup
+set nowritebackup
+set noswapfile
+set undofile
+
+set nocursorline
 set nonumber
 set norelativenumber
 set noshowmode

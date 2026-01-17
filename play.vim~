@@ -17,14 +17,12 @@ endfor
 function! PlayFrames()
     let l:save_cursor=getpos(".")
     let l:save_view=winsaveview()
-    while 1
-        for i in range(len(g:frames_content))
-            call setline(1,split(g:frames_content[i],"\n"))
-            normal! gg
-            silent! redraw!
-            execute 'sleep '.g:delay.'m'
-        endfor
-    endwhile
+    for i in range(len(g:frames_content))
+	call setline(1,split(g:frames_content[i],"\n"))
+        normal! gg
+        silent! redraw
+	execute 'sleep '.g:delay.'m'
+    endfor
     call setpos('.',l:save_cursor)
     call winrestview(l:save_view)
 endfunction
