@@ -1,4 +1,6 @@
-*.un~
 *~
+*.sw?
+*.un~
+ascii/
 *.mp4
-frames/
+
